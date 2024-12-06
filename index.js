@@ -12,7 +12,7 @@ app.use(cookieParser());
 
 // Configure CORS
 const corsOptions = {
-  origin: 'http://localhost:3000', // Allow requests from this origin (React frontend)
+  origin: 'https://my-testing-app-client.vercel.app', // Allow requests from this origin (React frontend)
   methods: 'GET,POST', // Allow these methods
   credentials: true, // Allow cookies to be sent with requests
 };
