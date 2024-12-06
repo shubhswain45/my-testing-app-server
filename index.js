@@ -21,11 +21,11 @@ app.use(cors(corsOptions));
 
 // Route to set a cookie
 app.get('/set-cookie', (req, res) => {
-  // Set a cookie called '__connectify_token' with a value of 'someTokenValue'
   res.cookie('__my_token', 'someTokenValue', {
     httpOnly: true,
-    secure: true, // `secure: true` if using HTTPS
-    sameSite: 'none', // SameSite setting for cookies
+    secure: true, // `secure: true` for production over HTTPS
+    sameSite: 'None', // SameSite=None for cross-site cookie
+    domain: '.my-testing-app-client.vercel.app', // Optional: specify your domain here
   });
   res.send('Cookie has been set');
 });
